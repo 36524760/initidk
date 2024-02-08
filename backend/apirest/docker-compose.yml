@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  springapirest:
+    image: springapirest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8088:8080
+    restart: always
+    depends_on:
+      - db
+    environment:
+      - DB_URL=jdbc:postgresql://db:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example123
+
+  db:
+    image: postgres:16.1
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example123
+      POSTGRES_DB: postgres
+    expose:
+      - 5432
