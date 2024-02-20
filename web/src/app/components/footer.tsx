@@ -4,12 +4,13 @@ export default function Footer() {
   const currentYear: number = new Date().getFullYear();
 
   return (
-    <footer className={`bg-white dark:bg-gray-900 dark:border-t dark:border-gray-500 ${inter.className}`}>
+    <footer
+      className={`bg-white dark:bg-gray-800 dark:border-t dark:border-gray-500 ${inter.className}`}
+    >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between my-4 mx-5">
-          {/* <div className="mb-6 md:mb-0"> */}
           <div className="mb-6 md:mb-0 flex flex-col items-center ">
-            <img src="/logo.svg" className="h-28 me-3 dark:invert" alt="Logo"/>
+            <img src="/logo.svg" className="h-28 me-3 dark:invert" alt="Logo" />
             <span className="font-bold self-center text-2xl whitespace-nowrap dark:text-white">
               DEV CODE Co.
             </span>
@@ -21,11 +22,6 @@ export default function Footer() {
                 Resources
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
-                  </a>
-                </li>
                 <li>
                   <a
                     href="https://tailwindcss.com/"
