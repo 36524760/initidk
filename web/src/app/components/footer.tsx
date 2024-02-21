@@ -40,16 +40,18 @@ export default function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
+                    href="https://github.com/sebastianvr"
+                    className="hover:underline"
+                    target="_blank"
                   >
                     Github
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://discord.com/users/324696067276931072"
                     className="hover:underline"
+                    target="_blank"
                   >
                     Discord
                   </a>
@@ -76,7 +78,7 @@ export default function Footer() {
           </div>
         </div>
         <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between my-10">
           <span
             className={`text-sm text-gray-500 sm:text-center dark:text-gray-400 ${montserrat.className}`}
           >
