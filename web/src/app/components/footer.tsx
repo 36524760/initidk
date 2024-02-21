@@ -1,4 +1,5 @@
-import { inter, montserrat } from "@/ui/fonts";
+import { inter, montserrat, roboto } from "@/ui/fonts";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear: number = new Date().getFullYear();
@@ -81,9 +82,31 @@ export default function Footer() {
           >
             © {currentYear}{" "}
             <a href="#" className="text-bold hover:underline">
-              DEV CODE Company
+              DEV CODE
             </a>
-            . All Rights Reserved.
+            . All Rights Not Reserved.
+            <small className={`${roboto.className} text-left text-sm`}>
+            <br />
+            developed by{" "}
+              <Link
+                href={"https://github.com/sebastianvr"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold"
+              >
+                {"frontend : <Sebastian-Vidal/>"}
+              </Link>
+              <br />
+              and{" "} 
+              <Link
+                href={"https://github.com/36524760"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold"
+              >
+                {"backend : <Cesar-Fuentes/>"}
+              </Link>
+            </small>
           </span>
           <div className="flex mt-4 p-5 sm:justify-center sm:mt-0">
             <a
