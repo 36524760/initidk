@@ -1,4 +1,5 @@
-import { inter, montserrat } from "@/ui/fonts";
+import { inter, montserrat, roboto } from "@/ui/fonts";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear: number = new Date().getFullYear();
@@ -39,16 +40,18 @@ export default function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
+                    href="https://github.com/sebastianvr"
+                    className="hover:underline"
+                    target="_blank"
                   >
                     Github
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://discord.com/users/324696067276931072"
                     className="hover:underline"
+                    target="_blank"
                   >
                     Discord
                   </a>
@@ -75,15 +78,37 @@ export default function Footer() {
           </div>
         </div>
         <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between my-10">
           <span
             className={`text-sm text-gray-500 sm:text-center dark:text-gray-400 ${montserrat.className}`}
           >
             © {currentYear}{" "}
             <a href="#" className="text-bold hover:underline">
-              DEV CODE Company
+              DEV CODE
             </a>
-            . All Rights Reserved.
+            . All Rights Not Reserved.
+            <small className={`${roboto.className} text-left text-sm`}>
+            <br />
+            developed by{" "}
+              <Link
+                href={"https://github.com/sebastianvr"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold"
+              >
+                {"frontend : <Sebastian-Vidal/>"}
+              </Link>
+              <br />
+              and{" "} 
+              <Link
+                href={"https://github.com/36524760"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold"
+              >
+                {"backend : <Cesar-Fuentes/>"}
+              </Link>
+            </small>
           </span>
           <div className="flex mt-4 p-5 sm:justify-center sm:mt-0">
             <a
