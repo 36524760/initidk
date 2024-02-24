@@ -1,0 +1,34 @@
+name: apirest springboot 1 ci
+
+on:
+  pull_request: 
+    branches:
+      - dev
+    paths:
+      - 'backend/apirest/**'
+  push:
+    branches:
+      - dev
+    paths:
+      - 'backend/apirest/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: setup 21jdk
+        uses: actions/setup-java@v3
+        with: 
+          java-version: '21'
+          distribution: 'adopt'
+
+      - name: dependencies
+        working-directory: ./backend/apirest
+        run: mvn install
+
+      - name: tests
+        working-directory: ./backend/apirest
+        run: mvn test
